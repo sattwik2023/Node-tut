@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white w-full max-w-md rounded-xl shadow-lg overflow-hidden">
+
+        <!-- Cover Image -->
+        <div class="h-32 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+
+        <!-- Profile Section -->
+        <div class="p-6 text-center">
+
+            <!-- Profile Image -->
+            <img 
+                src="<%= userData.img_url ? userData.img_url : '../upload/download (2).webp' %>"
+                alt="Profile"
+                class="w-32 h-32 rounded-full mx-auto -mt-20 border-4 border-white object-cover "
+            >
+
+            <!-- User Info -->
+            <h2 class="text-2xl font-bold text-gray-800 mt-4">
+                <%= userData.user_name %>
+            </h2>
+
+            <p class="text-gray-500">
+                <%= userData.email %>
+            </p>
+
+            <p class="text-gray-600 mt-3">
+                <%= userData.roles %>
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex justify-center gap-4 mt-5">
+                <!-- <button 
+                    class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+                    Edit Profile
+                </button> -->
+
+                <button 
+                    class="bg-gray-200 text-gray-700 px-5 py-2 rounded-lg hover:bg-gray-300">
+                    Logout
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- User Details -->
+        <div class="border-t p-6">
+
+            <h3 class="font-semibold text-lg mb-4">
+                User Details
+            </h3>
+
+            <div class="space-y-3 text-gray-700">
+
+                <div class="flex justify-between">
+                    <span class="font-medium">Name:</span>
+                    <span><%=userData.user_name%></span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span class="font-medium">Email:</span>
+                    <span><%=userData.email%></span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span class="font-medium">Age:</span>
+                    <span><%=userData.age%></span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span class="font-medium">User Type:</span>
+                    <span><%=userData.roles%></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
