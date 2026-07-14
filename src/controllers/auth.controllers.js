@@ -8,7 +8,7 @@ async function postUserLoginController(req, res) {
     try {
         const {email,password} = req.body ;
         const isValideUser = await user_model.findOne({email: req.body.email});
-        // console.log(isValideUser);
+        console.log(isValideUser);
         const isValidePasswod = isValideUser && isValideUser.password ? await bcrypt.compare(password , isValideUser.password) : false;
         // console.log("isValidePasswod",isValidePasswod);
         
