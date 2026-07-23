@@ -61,8 +61,8 @@ async function postRegistationController(req, res) {
     try {
         const { user_name, email, age, password } = req.body;
 
-        console.log("reqbody", req.body)
-        console.log("filename", req.file)
+        // console.log("reqbody", req.body)
+        // console.log("filename", req.file)
         // const cloudinay_url = await connectCloudinary(req.file.path)
         // console.log("cloudinay_url",cloudinay_url)
         // res.json({
